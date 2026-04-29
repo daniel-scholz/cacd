@@ -1,0 +1,25 @@
+{
+  "data_names": [
+    "oasis3",
+    "ixi"
+  ],
+  "dims": 2,
+  "fit_sites": {
+    "ixi": [
+      "Guys",
+      "HH"
+    ],
+    "oasis3": []
+  },
+  "model_name": "beatgans_autoenc",
+  "net_enc_z_id_dim": 0,
+  "net_enc_z_sem_dim": 512,
+  "net_intensity_augs_names": [],
+  "slices_around_middle": 50,
+  "test_sites": {
+    "ixi": [
+      "IOP"
+    ],
+    "oasis3": []
+  }
+}

@@ -1,0 +1,63 @@
+temp
+__pycache__
+generated
+latent_infer
+datasets/bedroom256.lmdb
+datasets/horse256.lmdb
+datasets/celebahq
+datasets/celebahq256.lmdb
+datasets/ffhq
+datasets/ffhq256.lmdb
+datasets/celeba.lmdb
+datasets/celeba
+checkpoints
+
+.ipynb_checkpoints/
+
+.vscode/
+
+test_*
+
+slurm_out*/*
+
+*.ckpt
+
+profiles/
+wandb/run*
+wandb/*.log
+wandb/latest-run
+logs/
+profiler/
+
+# registration outputs
+logs_*/
+outputAffine.txt
+
+# default log dir for pytorch lightning (sanity checking experiments)
+lightning_logs/
+
+pyradiomics/
+
+ixi_cyclegan/
+radiomics/*.npy
+
+# Reference-only paper LaTeX submodule — must NOT be in the public repo.
+docs/paper-source/
+
+# uv venv & build artefacts
+.venv/
+*.egg-info/
+build/
+dist/
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+tests/_artifacts/
+
+# Third-party baseline weights — not redistributed in public release.
+models/*/*.pt
+
+# Local reference snapshots for reproducibility comparisons (huge, machine-specific).
+results/baseline_comp.ref-*/

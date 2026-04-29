@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: "CACD: Contrastive Anatomy-Contrast Disentanglement"
+message: "If you use this software, please cite the MICCAI 2025 paper below."
+type: software
+license: MIT
+repository-code: "https://github.com/daniel-scholz/cacd"
+authors: &authors
+  - family-names: Scholz
+    given-names: Daniel
+  - family-names: Erdur
+    given-names: Ayhan Can
+  - family-names: Holland
+    given-names: Robbie
+  - family-names: Ehm
+    given-names: Viktoria
+  - family-names: Peeken
+    given-names: Jan C.
+  - family-names: Wiestler
+    given-names: Benedikt
+  - family-names: Rueckert
+    given-names: Daniel
+preferred-citation:
+  type: conference-paper
+  title: "Contrastive Anatomy-Contrast Disentanglement: A Domain-General MRI Harmonization Method"
+  authors: *authors
+  collection-title: "Medical Image Computing and Computer Assisted Intervention -- MICCAI 2025"
+  year: 2025
+  url: "https://papers.miccai.org/miccai-2025/0176-Paper1897.html"

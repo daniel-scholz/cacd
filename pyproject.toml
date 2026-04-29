@@ -1,0 +1,73 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cacd"
+version = "0.1.0"
+description = "CACD: Contrastive Anatomy-Contrast Disentanglement for MRI Harmonization"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+authors = [
+  { name = "Daniel Scholz" },
+]
+dependencies = [
+  "click~=8.1.7",
+  "lightning~=2.2.0",
+  "matplotlib",
+  "monai-weekly==1.4.*",
+  "nibabel",
+  "pandas",
+  "pytorch-fid~=0.3.0",
+  "rich",
+  "scikit-image",
+  "scikit-learn~=1.4.1",
+  "seaborn",
+  "setuptools<81",
+  "submitit",
+  "torch~=2.2.0",
+  "torchio~=0.19.5",
+  "torchmetrics[image]",
+  "torchvision",
+  "tqdm",
+  "umap-learn",
+  "wandb",
+  "xlrd~=2.0.1",
+]
+
+[project.optional-dependencies]
+radiomics = ["pyradiomics"]  # build deps required; see README
+
+[dependency-groups]
+dev = [
+  "pytest~=8.3",
+  "pytest-cov~=5.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["diffae"]
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "needs_weights: requires pretrained weights on disk",
+  "needs_data: requires the IXI/OASIS3/ONHarmony datasets mounted locally",
+  "slow: takes more than a few seconds",
+]
+addopts = "-ra --strict-markers"
+filterwarnings = [
+  # lightning 2.2 uses pkg_resources (removed in setuptools 81); fixed in lightning 2.4+
+  "ignore:pkg_resources is deprecated as an API:UserWarning",
+  "ignore:Deprecated call to .pkg_resources\\.declare_namespace:DeprecationWarning",
+  # SimpleITK 2.5.x SWIG bindings — upstream open issue
+  "ignore:builtin type Swig.*has no __module__:DeprecationWarning",
+  "ignore:builtin type swigvarlink.*has no __module__:DeprecationWarning",
+]
