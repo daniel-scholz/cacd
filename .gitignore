@@ -1,0 +1,33 @@
+# python
+__pycache__
+*.egg-info/
+build/
+dist/
+
+# venv
+.venv/
+
+# editor / notebook
+.vscode/
+.ipynb_checkpoints/
+
+# checkpoints / generated outputs
+checkpoints
+*.ckpt
+generated
+profiles/
+profiler/
+lightning_logs/
+logs/
+
+# registration intermediates
+logs_*/
+outputAffine.txt
+
+# wandb
+wandb/run*
+wandb/*.log
+wandb/latest-run
+
+# slurm
+slurm_out*/*

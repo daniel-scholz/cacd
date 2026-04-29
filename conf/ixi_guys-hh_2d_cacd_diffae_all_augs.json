@@ -1,0 +1,21 @@
+{
+  "data_names": [
+    "ixi"
+  ],
+  "dims": 2,
+  "fit_sites": {
+    "ixi": [
+      "Guys",
+      "HH"
+    ]
+  },
+  "net_double_gin_scanner_contrasting": "same_patient_negative",
+  "net_rc_do_updownsampling": true,
+  "net_rc_target_size": 2048,
+  "slices_around_middle": 10,
+  "test_sites": {
+    "ixi": [
+      "IOP"
+    ]
+  }
+}
